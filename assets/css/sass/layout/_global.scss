@@ -1,0 +1,32 @@
+body {
+  text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000;
+  font-family: "proxima-nova", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container-fluid {
+  max-width: 1600px;
+  padding: 0 27px !important;
+}
+a,
+a:active,
+a:focus,
+a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+img,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+.color-primary {
+  color: var(--primary-color);
+}
+.color-white {
+  color: white;
+}
