@@ -1,58 +1,77 @@
 header {
+  font-size: 0.725rem;
+  font-weight: 400;
+  line-height: 1.5em;
+  @media (max-width: 1023px) {
+    font-size: 0.7rem;
+  }
+  .navbar-nav > li.nav-item {
+    font-size: inherit;
+    display: block;
+    letter-spacing: 0.045em;
+    line-height: 1.5em;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 992px) {
+      justify-content: flex-start;
+    }
+  }
+
   .top-nav {
+    height: 2.5rem;
+    @media (max-width: 992px) {
+      height: 2.8rem;
+    }
     background-color: #222529;
-    height: 45px;
+    .navbar-nav > .nav-item {
+      color: var(--grey-color);
+      font-size: 0.775rem;
+      margin: 0 0 0 1.25rem;
+      transition: color 0.2s;
+      @media (max-width: 576px) {
+        font-size: 0.7rem;
+        margin-left: 0.75rem;
+      }
+      a:not(.btn-outline-white) {
+        padding: 0 !important;
+      }
+      &:hover {
+        color: var(--white-color);
+      }
+    }
     .cisco-logo img {
-      height: auto;
-      width: 45px;
+      width: 2.5rem;
     }
     .cisco-badge-text {
-      font-size: 13px;
+      display: flex;
+      align-items: center;
+      color: var(--grey-color);
+      flex: 1;
+      padding: 0.5rem 1rem;
     }
-    .nav-item {
+    .search-btn {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0 0 0 22.5px;
-      padding: 0;
-      color: hsla(0, 0%, 100%, 0.7);
-      font-size: 14px;
-      position: relative;
-      white-space: nowrap;
-      letter-spacing: 0.045em;
-      line-height: 1.5em;
-      transition: color 0.2s;
-      -webkit-transition: color 0.2s;
-      -moz-transition: color 0.2s;
-      -ms-transition: color 0.2s;
-      -o-transition: color 0.2s;
-      &:hover {
-        .nav-link {
-          opacity: 1;
-        }
-      }
-      .nav-link {
-        color: hsla(0, 0%, 100%, 0.7);
-        font-size: 14px;
-        padding: 0;
-      }
-    }
-    .search-btn {
       background: transparent;
       border: none;
       padding: 0;
       margin: 0;
       color: inherit;
-      width: 22.5px;
-      height: 22.5px;
-      font-size: 22.5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 1.25rem;
+      height: 1.25rem;
+      font-size: 1.25rem;
+      opacity: 0.7;
+      transition: opacity 0.5s;
+      &:hover {
+        opacity: 1;
+      }
     }
     .btn-outline-white {
       border: 1px solid;
-      padding: 3.6px 14.4px;
+      padding: 0.2rem 0.8rem;
       border-radius: 0;
       transition: color 0.2s;
       font-size: inherit;
