@@ -1,39 +1,11 @@
 header {
   .main-nav {
-    font-size: 1rem;
-    border-bottom: 1px solid #cecece;
-    .navbar-nav > li > a:not(.btn) {
-      padding: 1rem 1.03rem !important;
-    }
-    @media (max-width: 1300px) {
-      font-size: 16.07px;
-      .navbar-nav > li > a:not(.btn) {
-        padding: 1rem 0.8rem !important;
-      }
-    }
-    @media (max-width: 1100px) {
-      font-size: 15px;
-      .navbar-nav > li > a:not(.btn) {
-        padding: 1rem 0.4rem !important;
-      }
-    }
-    @media (max-width: 350px) {
-      .btn {
-        display: none;
-      }
-    }
-    .navbar-toggler {
-      @media (max-width: 991.98px) {
-        all: unset;
-        cursor: pointer;
-        position: relative;
-        display: block;
-        height: 100%;
-        right: 0;
+    border-color: var(--cecece);
+    .navbar-toggle {
+      @media (max-width: $maxMedium) {
         width: 1.2rem;
         height: 2rem;
-        padding: 0;
-        transition: right 0.3s linear;
+        @include prefix(transition, right 0.3s linear);
         &::before,
         &::after {
           content: "";
@@ -58,11 +30,7 @@ header {
             top: 50%;
           }
           &::before {
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
+            @include prefix(transform, rotate(45deg));
           }
           &::after {
             transform: rotate(-45deg);
@@ -70,54 +38,39 @@ header {
         }
       }
     }
-    .btn {
-      padding: 0.65em 24px !important;
-      border: none;
-      letter-spacing: -0.05px;
-      line-height: 1.5;
-      &.btn-outline-primary {
-        box-shadow: inset 0 0 0 1px currentColor;
-      }
-      @media (max-width: 1300px) {
-        font-size: 16.2px;
-      }
-      @media (max-width: 1100px) {
-        padding: 0.65em 24px !important;
-        font-size: 15px;
-      }
-      @media (max-width: 992px) {
-        padding: 0.5rem 0.85rem !important;
-        font-size: 0.8rem;
-        margin-right: 1.1rem;
-      }
-    }
     .nav-item {
-      &:nth-last-child(2) {
-        margin: 0 24px;
-      }
-      a:not(.btn) {
+      & > a:not(.btn) {
+        letter-spacing: 0.045em;
         color: var(--text-color);
+        font-size: max(15px, min(1.25vw, 18px)) !important;
+        padding: 1rem max(0.8rem, min(1.1vw, 24px)) !important;
         &:hover {
           color: var(--main-color);
         }
+        @media (max-width: 1280px) {
+          padding: 1rem max(0.4rem, min(0.7vw, 24px)) !important;
+        }
+        @media (max-width: $maxMedium) {
+          font-size: 20px !important;
+          padding: 20px 32px !important;
+          font-weight: 300;
+          letter-spacing: 0 !important;
+        }
       }
-      @media (max-width: 992px) {
-        flex-direction: column;
-        align-items: flex-start !important;
+    }
+    .btn {
+      padding: 0.65em 24px;
+      letter-spacing: -0.05px;
+      line-height: 1.5;
+      font-size: max(15px, min(1.25vw, 18px));
+      &.btn-outline-primary {
+        box-shadow: inset 0 0 0 1px currentColor;
       }
     }
     .logo {
-      padding: 0 !important;
-      position: relative;
-      flex-grow: 1;
-      flex-shrink: 0;
       height: 4.2rem;
-      margin-right: 2.15rem;
       max-width: 9.7rem;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      @media (max-width: 991px) {
+      @media (max-width: $maxMedium) {
         max-width: 6.5rem;
         height: 3.8rem;
       }
@@ -125,35 +78,7 @@ header {
     .navbar-nav {
       li {
         &.has-sub-navigation {
-          @media (max-width: 992px) {
-            display: inline-flex;
-            width: fit-content;
-            max-width: 100%;
-          }
-          &:hover {
-            .sub-navigation {
-              display: grid;
-              height: auto;
-              opacity: 1;
-            }
-            a {
-              &::after {
-                bottom: -3px;
-                transform: rotate(225deg);
-                -webkit-transform: rotate(225deg);
-                -moz-transform: rotate(225deg);
-                -ms-transform: rotate(225deg);
-                -o-transform: rotate(225deg);
-              }
-            }
-          }
           & > a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            span {
-              margin-right: 8px;
-            }
             &::after {
               content: "";
               border-bottom: 1px solid #6c757d;
@@ -165,14 +90,21 @@ header {
               height: 8px;
               transition: transform 0.2s ease-out;
               transform: rotate(45deg);
-              -webkit-transform: rotate(45deg);
-              -moz-transform: rotate(45deg);
-              -ms-transform: rotate(45deg);
-              -o-transform: rotate(45deg);
-              -webkit-transition: transform 0.2s ease-out;
-              -moz-transition: transform 0.2s ease-out;
-              -ms-transition: transform 0.2s ease-out;
-              -o-transition: transform 0.2s ease-out;
+            }
+          }
+          @media (min-width: $minLarge) {
+            &:hover {
+              .sub-navigation {
+                display: grid;
+                height: auto;
+                opacity: 1;
+              }
+              a {
+                &::after {
+                  bottom: -3px;
+                  transform: rotate(225deg);
+                }
+              }
             }
           }
         }
@@ -192,15 +124,17 @@ header {
       opacity: 0;
       max-width: 445px;
       width: max-content;
-      @media (max-width: 992px) {
+      @media (max-width: $maxMedium) {
+        width: 100%;
         padding: 0 !important;
         border: 0;
         background-color: transparent;
-        position: relative;
+        position: initial;
+        max-width: initial;
       }
       &.sub-navigation-with-icon-wrapper {
         max-width: 672px;
-        @media (max-width: 992px) {
+        @media (max-width: $maxMedium) {
           max-width: 100% !important;
         }
         .sub-navigation-with-icon {
@@ -209,9 +143,9 @@ header {
           line-height: 20px;
           position: relative;
           letter-spacing: normal;
-          @media (max-width: 992px) {
+          @media (max-width: $maxMedium) {
             line-height: 27px !important;
-            padding: 5px 20px 5px 24px !important;
+            padding: 5px 20px 5px 56px !important;
           }
           .sub-navigation-icon {
             margin-right: 20px;
@@ -225,7 +159,7 @@ header {
             .sub-navigation-title {
               font-size: 16px;
               font-weight: 600;
-              @media (max-width: 992px) {
+              @media (max-width: $maxMedium) {
                 font-weight: 400;
               }
               &[data-icon] {
@@ -285,7 +219,7 @@ header {
           position: relative;
           overflow: hidden;
           @media (max-width: 992px) {
-            padding-left: 24px !important;
+            padding-left: 56px !important;
             font-size: 1rem;
             line-height: 27px;
           }
@@ -318,7 +252,7 @@ header {
         margin-top: 28px;
         padding: 0;
         position: relative;
-        @media (max-width: 992px) {
+        @media (max-width: $maxMedium) {
           display: none;
           margin: 0;
           li {
@@ -352,28 +286,53 @@ header {
           top: 0;
         }
       }
+      &.show {
+        display: grid;
+        height: auto;
+        opacity: 1;
+        a {
+          &::after {
+            bottom: -3px;
+            transform: rotate(225deg);
+          }
+        }
+      }
     }
-    @media (max-width: 992px) {
+    @media (max-width: $maxMedium) {
       .navbar-collapse {
         background: var(--white-color);
         color: var(--text-color);
         display: block !important;
-        min-height: calc(100% - 106.6px);
-        height: 100%;
+        height: calc(100% - 106.6px);
+        padding: 12px 0 !important;
+        position: fixed;
+        width: 100%;
+        top: 106.6px;
         left: 0;
         margin: 0;
         overflow-y: scroll;
-        padding: 12px 32px;
         pointer-events: none;
-        position: fixed;
-        top: 106.6px;
         opacity: 0;
-        transition: opacity 0.2s linear, top 0.2s linear;
-        width: 100%;
         z-index: 1041;
+        transition: opacity 0.2s linear, top 0.2s linear;
         &.show {
           pointer-events: inherit;
           opacity: 1;
+        }
+        .nav-link {
+          &.show {
+            &::before {
+              content: "";
+              background: #fafafa;
+              display: block;
+              height: 52px;
+              left: -32px;
+              position: absolute;
+              right: -32px;
+              top: 10px;
+              z-index: -1;
+            }
+          }
         }
       }
     }

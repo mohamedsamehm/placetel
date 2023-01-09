@@ -9,11 +9,10 @@ html {
 body {
   text-rendering: optimizeLegibility;
   font-size: 1rem;
-  background-color: #fff;
-  color: var(--text-color);
   font-family: "proxima-nova", -apple-system, BlinkMacSystemFont,
     "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
+  color: var(--text-color);
 }
 
 .container-fluid {
@@ -39,4 +38,10 @@ svg {
   @media (min-width: 992px) {
     width: auto !important;
   }
+}
+.mw-80 {
+  max-width: 80% !important;
+}
+.mh-500 {
+  max-height: 500px !important;
 }

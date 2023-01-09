@@ -3,10 +3,25 @@
   --alt-color: #198bc7;
   --text-color: #000;
   --white-color: #fff;
-  // --grey-color: #cecece;
+  --cecece: #cecece;
   --grey-color: hsla(0, 0%, 100%, 0.7);
   --color-grey-dark: #6c757d;
+  --dfdfdf: #dfdfdf;
+  --cecece: #cecece;
+  --section-background: #f4f4f4;
+}
+
+$maxSmall: 767.98px;
+$maxMedium: 991.98px;
+$minLarge: 992px;
+$maxMobile: 566.98px;
+.border-grey {
+  border-color: var(--cecece);
 }
 .main-color {
   color: var(--main-color);
+}
+
+.bg-main-color {
+  background-color: var(--main-color);
 }

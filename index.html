@@ -6,54 +6,67 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Placetel - Die virtuelle Cloud-Telefonanlage | Cloud Leader | 2022</title>
+  <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Home Page CSS -->
+  <link rel="stylesheet" href="assets/css/home.css">
+  <!-- Font-awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <!-- Fonts -->
   <link rel="stylesheet" href="assets/css/font.css">
 </head>
 
-<body>
+<body class="bg-white">
   <header class="fixed-top position-sticky">
+    <!-- Top Nav -->
     <nav class="navbar navbar-expand bg-dark p-0 top-nav" data-bs-theme="dark">
       <div class="container-fluid">
         <span class="cisco-logo"><img src="assets/imgs/cisco.svg" alt="Cisco logo"></span>
-        <span class="cisco-badge-text py-2 px-3 d-none d-sm-block">Placetel ist Teil von Cisco</span>
+        <span class="d-flex py-2 px-3 align-items-center cisco-badge-text py-2 px-3 d-none d-sm-block">Placetel ist
+          Teil von Cisco</span>
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item d-none d-lg-flex">
+          <li class="nav-item me-1 d-none d-lg-flex">
             <a href="#" class="nav-link text-decoration-underline">Partner werden</a>
           </li>
-          <li class="nav-item d-none d-lg-flex">
+          <li class="nav-item me-1 d-none d-lg-flex">
             <a href="#" class="nav-link">Support</a>
           </li>
-          <li class="nav-item d-none d-lg-flex">
+          <li class="nav-item me-1 d-none d-lg-flex">
             <a href="#" class="nav-link">0221 29 191 999</a>
           </li>
-          <li class="nav-item">
-            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <li class="nav-item ms-2 me-3 d-flex align-items-center">
+            <button
+              class="search-btn opacity-75 d-flex justify-content-center align-items-center bg-transparent border-0 p-0 m-0 fs-5"><i
+                class="fa-solid fa-magnifying-glass"></i></button>
           </li>
-          <li class="nav-item">
-            <a href="#" class="btn btn-outline-white">Kundenlogin</a>
+          <li class="nav-item ms-1 d-flex align-items-center justify-content-center">
+            <a href="#" class="btn btn-outline-white border rounded-0 fw-normal">Kundenlogin</a>
           </li>
         </ul>
       </div>
     </nav>
-    <nav class="navbar navbar-expand-lg bg-white main-nav p-0">
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white main-nav p-0 border-bottom">
       <div class="container-fluid">
-        <a class="navbar-brand logo" href="/">
+        <a class="navbar-brand logo p-0 position-relative flex-grow-1 flex-shrink-0 me-4 pe-2 d-flex align-items-center w-100"
+          href="/">
           <img src="assets/imgs/logo.png" alt="Logo">
         </a>
-        <a href="#" class="btn btn-primary d-lg-none ms-auto">Kostenlos testen</a>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"></button>
+        <button
+          class="navbar-toggle collapsed p-0 cursor-pointer position-relative d-block bg-transparent border-0 right-0"
+          type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"></button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto position-relative">
-            <li class="nav-item ms-0 ms-lg-auto has-sub-navigation position-relative show">
-              <a class="nav-link" href="#">
-                <span>Produkt</span>
+          <ul class="navbar-nav ms-auto position-relative h-100 h-lg-auto">
+            <li
+              class="nav-item ms-0 ms-lg-auto has-sub-navigation position-relative flex-column flex-lg-wrap align-items-center dropdown">
+              <a class="nav-link d-flex align-items-center justify-content-start justify-content-lg-center" href="#"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="me-2">Produkt</span>
               </a>
-              <div class="sub-navigation sub-navigation-with-icon-wrapper">
+              <div class="sub-navigation sub-navigation-with-icon-wrapper dropdown-menu">
                 <ul class="row row-cols-1 row-cols-lg-2">
                   <li class="sub-navigation-with-icon">
                     <a href="#" class="d-flex justify-content-center">
@@ -126,11 +139,12 @@
                 </ul>
               </div>
             </li>
-            <li class="nav-item has-sub-navigation">
-              <a class="nav-link" href="#"><span>Funktionen</span></a>
-              <div class="sub-navigation mw-100">
+            <li class="nav-item has-sub-navigation flex-column flex-lg-wrap dropdown position-static">
+              <a class="nav-link d-flex align-items-center justify-content-start justify-content-lg-center" href="#"
+                data-bs-toggle="dropdown" aria-expanded="false"><span class="me-2">Funktionen</span></a>
+              <div class="sub-navigation mw-100 dropdown-menu">
                 <div class="row row-cols-1 row-cols-lg-5">
-                  <ul class="col">
+                  <ul class="col-12 col-lg">
                     <li class="sub-navigation-headline">
                       <a href="#"><strong>Cloud-Telefonie</strong></a>
                     </li>
@@ -150,7 +164,7 @@
                       <a href="#">Voicemail</a>
                     </li>
                   </ul>
-                  <ul class="col">
+                  <ul class="col-12 col-lg">
                     <li class="sub-navigation-headline">
                       <a href="#"><strong>Collaboration</strong></a>
                     </li>
@@ -170,7 +184,7 @@
                       <a href="#">Meetings aufzeichnen</a>
                     </li>
                   </ul>
-                  <ul class="col">
+                  <ul class="col-12 col-lg">
                     <li class="sub-navigation-headline">
                       <a href="#"><strong>Rufnummern</strong></a>
                     </li>
@@ -190,7 +204,7 @@
                       <a href="#">Vorwahl Check</a>
                     </li>
                   </ul>
-                  <ul class="col">
+                  <ul class="col-12 col-lg">
                     <li class="sub-navigation-headline">
                       <a href="#"><strong>Geräte & Clients</strong></a>
                     </li>
@@ -210,7 +224,7 @@
                       <a href="#">Endgeräte-Shop</a>
                     </li>
                   </ul>
-                  <ul class="col">
+                  <ul class="col-12 col-lg">
                     <li class="sub-navigation-headline">
                       <a href="#"><strong>Placetel AppStore</strong></a>
                     </li>
@@ -230,7 +244,7 @@
                       <a href="#">Apps entwickeln</a>
                     </li>
                   </ul>
-                  <ul class="col-12 sub-navigation-border-top">
+                  <ul class="col-12 sub-navigation-border-top w-100">
                     <li>
                       <a href="#">
                         Hier klicken und alle 150 Funktionen entdecken
@@ -240,12 +254,16 @@
                 </div>
               </div>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Preise</a></li>
-            <li class="nav-item has-sub-navigation position-relative">
-              <a href="#" class="nav-link"><span>Darum Placetel</span></a>
-              <div class="sub-navigation">
+            <li class="nav-item flex-column flex-lg-wrap align-items-center"><a class="nav-link" href="#">Preise</a>
+            </li>
+            <li class="nav-item flex-column has-sub-navigation position-relative dropdown">
+              <a href="#" data-bs-toggle="dropdown" aria-expanded="false"
+                class="nav-link d-flex align-items-center justify-content-start justify-content-lg-center"><span
+                  class="me-2">Darum
+                  Placetel</span></a>
+              <div class="sub-navigation dropdown-menu mb-3">
                 <div class="row row-cols-1 row-cols-lg-2">
-                  <ul class="col">
+                  <ul class="col-12 col-lg">
                     <li class="sub-navigation-headline">
                       <a href="#"><strong>Unternehmen</strong></a>
                     </li>
@@ -268,7 +286,7 @@
                       <a href="#">FAQ zur Telefonanlage</a>
                     </li>
                   </ul>
-                  <ul class="col">
+                  <ul class="col-12 col-lg">
                     <li class="sub-navigation-headline">
                       <a href="#"><strong>Lösungen</strong></a>
                     </li>
@@ -285,95 +303,105 @@
                 </div>
               </div>
             </li>
-            <li class="nav-item d-none d-xl-flex">
-              <a href="#" class="btn btn-outline-primary">Vertrieb kontaktieren</a>
+            <span class="d-lg-none mt-auto mt-lg-0 mb-4 pb-2 border-top border-grey border-1 opacity-75"></span>
+            <li class="nav-item align-items-center mx-lg-4 d-lg-none d-xl-flex mb-3 mb-lg-0 mx-5 mx-lg-0">
+              <a href="#" class="btn btn-outline-primary border-0 fw-semibold w-100 w-lg-auto">Vertrieb kontaktieren</a>
             </li>
-            <li class="nav-item ms-3 ms-xl-0 d-none d-lg-flex">
-              <a href="#" class="btn btn-primary">Kostenlos testen</a>
+            <li class="nav-item d-flex align-items-center ms-lg-3 ms-xl-0 mb-4 mb-lg-0 mx-5 mx-lg-0">
+              <a href="#" class="btn btn-primary border-0 fw-semibold w-100 w-lg-auto">Kostenlos testen</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <section class="hero-image">
+  <!-- Hero Section -->
+  <section class="hero-image bg-white">
     <div class="container-fluid">
-      <div class="text-content">
-        <h1 class="h1">All-in-One Kommunikation: Cloud-Telefonanlage, Messaging, Meetings.</h1>
-        <p><strong>Sichere Business-Kommunikation</strong> für verteilte Teams im Homeoffice, im Büro oder unterwegs.
+      <div class="text-content py-3 d-flex justify-content-center align-items-start flex-column">
+        <h1 class="fw-bold display-5 mb-4 mb-lg-5">All-in-One Kommunikation: Cloud-Telefonanlage, Messaging, Meetings.
+        </h1>
+        <p class="mb-4"><strong class="fw-normal main-color">Sichere Business-Kommunikation</strong> für
+          verteilte Teams im
+          Homeoffice,
+          im Büro oder unterwegs.
           Eingerichtet in fünf Minuten. Monatlich kündbar.</p>
-        <div class="block-icontext">
-          <span class=" icon"><img src="assets/imgs/chat.svg" alt=""></span>
-          <div>Flexible Cloud-Telefonanlage</div>
-        </div>
-        <div class="block-icontext">
-          <span class=" icon"><img src="assets/imgs/chat.svg" alt=""></span>
-          <div>All-in-One Kommunikation mit Webex</div>
-        </div>
-
-        <div class="block-icontext">
-          <span class="icon"><img src="assets/imgs/chat.svg" alt=""></span>
-          <div>Individualisierbar mit Mobilfunk, Smartphones,<br> Telefonen, Integrationen – und vielem mehr</div>
-        </div>
-      </div>
-      <div class="images d-lg-none">
-        <img src="https://place-hold.it/1000x600/dfdfdf" alt="">
-      </div>
-    </div>
-  </section>
-  <section class="trust-elements">
-    <div class="container-fluid">
-      <div class="inner">
-        <div class="heading">
-          <h2>Über 30.000 Firmenkunden vertrauen Placetel. Start-ups, mittelständische Unternehmen und große Konzerne.
-          </h2>
-        </div>
-        <div class="logos">
-          <div class="logo">
-            <img src="assets/imgs/hellofresh.svg" alt="hellofresh logo">
-          </div>
-          <div class="logo">
-            <img src="assets/imgs/n26.svg" alt="n26 logo">
-          </div>
-          <div class="logo">
-            <img src="assets/imgs/everdrop-logo.svg" alt="everdrop logo">
-          </div>
-          <div class="logo">
-            <img src="assets/imgs/about-you.avif" alt="about you">
-          </div>
-          <div class="logo">
-            <img src="assets/imgs/bonduelle.svg" alt="bonduelle">
-          </div>
-          <div class="logo">
-            <img src="assets/imgs/sky.svg" alt="sky">
-          </div>
-          <div class="logo">
-            <img src="assets/imgs/idealo.svg" alt="idealo">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="tabs-section">
-    <div class="container-fluid">
-      <div class="inner">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#cloud-telefonie-pane"
-              type="button">Cloud-Telefonie</button>
+        <ul class="list-group mb-4 mb-lg-0">
+          <li class="list-group-item border-0 bg-transparent d-flex align-items-center px-0">
+            <span class="me-2 pe-1 main-color"><i class="fa-regular fa-message"></i></span> Flexible Cloud-Telefonanlage
           </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="messaging-meetings-tab" data-bs-toggle="tab"
-              data-bs-target="#messaging-meetings-tab-pane" type="button">Messaging &
-              Meetings</button>
+          <li class="list-group-item border-0 bg-transparent d-flex align-items-center px-0">
+            <span class="me-2 pe-1 main-color"><i class="fa-regular fa-message"></i></span> All-in-One
+            Kommunikation mit Webex
+          </li>
+          <li class="list-group-item border-0 bg-transparent d-flex align-items-center px-0">
+            <span class="me-2 pe-1 main-color"><i class="fa-regular fa-message"></i></span> Individualisierbar
+            mit Mobilfunk, Smartphones,<br> Telefonen, Integrationen – und vielem mehr
           </li>
         </ul>
-        <div class="tab-content">
-          <div class="tab-pane fade show active" id="cloud-telefonie-pane">
-            <div class="row row-cols-1 row-cols-lg-2 tabs-funktionen">
-              <div class="text-content">
-                <h3 class="h5">Immer zuverlässig erreichbar</h3>
-                <h4 class="h4"><strong class="main-color">Genau die Funktionen,</strong> die Sie brauchen.</h4>
+        <div class="d-lg-none">
+          <img src="https://place-hold.it/1000x600/dfdfdf" class="img-fluid" alt="Hero Image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Trust Elements Section -->
+  <section class="trust-elements border-top text-center py-4 border-grey">
+    <div class="container-fluid">
+      <h2 class="fs-6 mb-3">Über 30.000 Firmenkunden vertrauen Placetel. Start-ups, mittelständische Unternehmen und
+        große
+        Konzerne.</h2>
+      <div class="justify-content-center logos row row-cols-auto g-5">
+        <div class="logo">
+          <img class="img-fluid" src="assets/imgs/hellofresh.svg" alt="hellofresh logo">
+        </div>
+        <div class="logo">
+          <img class="img-fluid" src="assets/imgs/n26.svg" alt="n26 logo">
+        </div>
+        <div class="logo">
+          <img class="img-fluid" src="assets/imgs/everdrop-logo.svg" alt="everdrop logo">
+        </div>
+        <div class="logo">
+          <img class="img-fluid" src="assets/imgs/about-you.avif" alt="about you">
+        </div>
+        <div class="logo">
+          <img class="img-fluid" src="assets/imgs/bonduelle.svg" alt="bonduelle">
+        </div>
+        <div class="logo">
+          <img class="img-fluid" src="assets/imgs/sky.svg" alt="sky">
+        </div>
+        <div class="logo">
+          <img class="img-fluid" src="assets/imgs/idealo.svg" alt="idealo">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Tabs Section -->
+  <section class="tabs-section py-5">
+    <div class="container-fluid">
+      <ul class="nav nav-tabs mb-3 pt-2">
+        <li class="nav-item w-50" role="presentation">
+          <button class="nav-link m-0 active w-100 bg-transparent border-0 border-4 border-bottom pb-3 fs-2 fw-semibold"
+            data-bs-toggle="tab" data-bs-target="#cloud-telefonie-pane" type="button">Cloud-Telefonie</button>
+        </li>
+        <li class="nav-item w-50">
+          <button class="nav-link m-0 w-100 bg-transparent border-0 border-4 border-bottom pb-3 fs-2 fw-semibold"
+            id="messaging-meetings-tab" data-bs-toggle="tab" data-bs-target="#messaging-meetings-tab-pane"
+            type="button">Messaging &
+            Meetings</button>
+        </li>
+      </ul>
+      <div class="tab-content mb-5">
+        <!-- Tab 1 -->
+        <div class="tab-pane fade show active" id="cloud-telefonie-pane">
+          <div class="row row-cols-1 row-cols-lg-2 tabs-funktionen mb-5">
+            <div class="text-content d-flex flex-column justify-content-evenly align-items-start mh-500">
+              <div class="heading">
+                <h3 class="mb-3 fs-5 fw-normal">Immer zuverlässig erreichbar</h3>
+                <h4 class="fs-2 mb-4 pb-2 fw-semibold"><strong class="main-color fw-semibold">Genau die
+                    Funktionen,</strong> die Sie
+                  brauchen.
+                </h4>
                 <p>Bei Placetel erhalten Sie eine umfangreiche Cloud-Telefonanlage mit vielen Integrationen sowie einen
                   vollwertigen
                   Telefonanschluss aus einer Hand. Passen Sie Ihre Telefonanlage aus der Cloud flexibel an Ihr Team und
@@ -381,73 +409,87 @@
                   Bedürfnisse
                   an und starten Sie innerhalb von wenigen Minuten Ihren ersten Anruf.
                 </p>
-                <a href="#" class="btn btn-primary w-100 w-lg-auto">Mehr zum Produkt erfahren</a>
               </div>
-              <div class="images">
-                <img src="assets/imgs/cloudtelefonie.avif" alt="cloudtelefonie image">
-              </div>
+              <a href="#" class="btn btn-primary w-100 w-lg-auto">Mehr zum Produkt erfahren</a>
             </div>
-            <div class="row row-cols-1 row-cols-lg-2 features-collab">
-              <div class="images mb-5 mb-lg-0">
-                <img src="http://www.place-hold.it/750x500/dedede" alt="">
-              </div>
-              <div class="text-content">
-                <h4>Mehr Flexibilität <strong class="main-color">für Ihr Team</strong></h4>
-                <div class="accordion" id="tab-1">
-                  <div class="accordion-item">
+            <div class="images d-flex flex-column justify-content-center align-items-start mh-500">
+              <img src="assets/imgs/cloudtelefonie.avif" alt="cloudtelefonie image" class="mh-100">
+            </div>
+          </div>
+          <div class="row row-cols-1 row-cols-lg-2 features-collab pt-5">
+            <div class="images mb-5 mb-lg-0 d-flex flex-column justify-content-center align-items-start mh-500">
+              <img src="http://www.place-hold.it/750x500/dedede" alt="" class="mh-100">
+            </div>
+            <div class="text-content d-flex flex-column justify-content-center align-items-start mh-500">
+              <h4 class="fs-2 fw-semibold mb-4 pb-3">Mehr Flexibilität <strong class="main-color">für Ihr Team</strong>
+              </h4>
+              <div class="accordion mw-100" id="tab-1">
+                <div class="accordion-item d-flex align-items-baseline bg-transparent border-0 mb-3">
+                  <div class="w-100">
                     <h2 class="accordion-header">
-                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#collapse-1-tab-1">
-                        <div><span class="icon"><img src="assets/imgs/chat.svg" alt=""></span><span class="title">Mehr
-                            als 150
-                            Funktionen</span>
-                        </div>
-                        <span class="accordion-toggle-icon"></span>
+                      <button type="button"
+                        class="accordion-button collapsed bg-transparent border-0 p-2 shadow-none fs-5 fw-semibold"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-1-tab-1">
+                        <span class="d-flex align-items-center fs-4 me-3"><i class="fa-regular fa-message"></i></span>
+                        Mehr als 150 Funktionen
+                        <span class="accordion-toggle-icon position-relative ms-auto"></span>
                       </button>
                     </h2>
-                    <div id="collapse-1-tab-1" class="accordion-collapse collapse" data-bs-parent="#tab-1">
-                      <div class="accordion-body">
-                        <p>Bei Placetel können Sie alle klassischen Telefonanlagen-Funktionen und viele einzigartige
+                    <div id="collapse-1-tab-1" class="accordion-collapse h-100 collapse d-block"
+                      data-bs-parent="#tab-1">
+                      <div class="accordion-body p-0 ps-5">
+                        <p class="m-0 text-truncate mw-80">Bei Placetel können Sie alle klassischen
+                          Telefonanlagen-Funktionen
+                          und viele einzigartige
                           Cloud-Funktionen immer leicht
                           und von überall aus konfigurieren. Einfacher geht’s nicht!
                         </p>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
+                </div>
+                <div class="accordion-item d-flex align-items-baseline bg-transparent border-0 mb-3">
+                  <div class="w-100">
                     <h2 class="accordion-header">
-                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#collapse-2-tab-1">
-                        <div><span class="icon"><img src="assets/imgs/chat.svg" alt=""></span><span
-                            class="title">Günstige und
-                            transparente Kosten</span>
-                        </div>
-                        <span class="accordion-toggle-icon"></span>
+                      <button type="button"
+                        class="accordion-button collapsed bg-transparent border-0 p-2 shadow-none fs-5 fw-semibold"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-2-tab-1">
+                        <span class="d-flex align-items-center fs-4 me-3"><i class="fa-regular fa-message"></i></span>
+                        Günstige und transparente Kosten
+                        <span class="accordion-toggle-icon position-relative ms-auto"></span>
                       </button>
                     </h2>
-                    <div id="collapse-2-tab-1" class="accordion-collapse collapse" data-bs-parent="#tab-1">
-                      <div class="accordion-body">
-                        <p>Minutengenau Abrechnung oder Flatrates, Optionen flexibel hinzu- und abbuchen und sogar die
+                    <div id="collapse-2-tab-1" class="accordion-collapse h-100 collapse d-block"
+                      data-bs-parent="#tab-1">
+                      <div class="accordion-body p-0 ps-5">
+                        <p class="m-0 text-truncate mw-80">Minutengenau Abrechnung oder Flatrates, Optionen flexibel
+                          hinzu-
+                          und abbuchen und sogar die
                           Hardware monatlich auf Ihre
-                          Rechnung mieten. Bei Placetel haben Sie immer die volle Kontrolle!
-                        </p>
+                          Rechnung mieten. Bei Placetel haben Sie immer die volle Kontrolle!</p>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
+                </div>
+                <div class="accordion-item d-flex align-items-baseline bg-transparent border-0">
+                  <div class="w-100">
                     <h2 class="accordion-header">
-                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#collapse-3-tab-1">
-                        <div><span class="icon"><img src="assets/imgs/chat.svg" alt=""></span><span
-                            class="title">Schnell
-                            eingerichtet, intuitiv zu bedienen</span>
-                        </div>
-                        <span class="accordion-toggle-icon"></span>
+                      <button type="button"
+                        class="accordion-button collapsed bg-transparent border-0 p-2 shadow-none fs-5 fw-semibold"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-3-tab-1">
+                        <span class="d-flex align-items-center fs-4 me-3"><i class="fa-regular fa-message"></i></span>
+                        Schnell eingerichtet,
+                        intuitiv zu bedienen
+                        <span class="accordion-toggle-icon position-relative ms-auto"></span>
                       </button>
                     </h2>
-                    <div id="collapse-3-tab-1" class="accordion-collapse collapse" data-bs-parent="#tab-1">
-                      <div class="accordion-body">
-                        <p>Ihre Cloud Telefonanlage ist in wenigen Minuten eingerichtet und auf vorhandenen Geräten
+                    <div id="collapse-3-tab-1" class="accordion-collapse h-100 collapse d-block"
+                      data-bs-parent="#tab-1">
+                      <div class="accordion-body p-0 ps-5">
+                        <p class="m-0 text-truncate mw-80">Ihre Cloud Telefonanlage ist in wenigen Minuten eingerichtet
+                          und
+                          auf
+                          vorhandenen Geräten
                           einsatzbereit. Über das
                           Webportal können Sie jederzeit Nutzer und Funktionen administrieren.
                         </p>
@@ -458,43 +500,53 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="messaging-meetings-tab-pane">
-            <div class="row tabs-funktionen">
-              <div class="text-content">
-                <h3 class="h5">Die neue Art der Zusammenarbeit</h3>
-                <h4 class="h4"><strong class="main-color">GIhre Business-Kommunikation</strong> in einem Tool.</h4>
+        </div>
+        <!-- Tab 2 -->
+        <div class="tab-pane fade show" id="messaging-meetings-tab-pane">
+          <div class="row row-cols-1 row-cols-lg-2 tabs-funktionen mb-5">
+            <div class="text-content d-flex flex-column justify-content-evenly align-items-start mh-500">
+              <div class="heading">
+                <h3 class="mb-3 fs-5 fw-normal">Die neue Art der Zusammenarbeit</h3>
+                <h4 class="fs-2 mb-4 pb-2 fw-semibold"><strong class="main-color fw-semibold">GIhre
+                    Business-Kommunikation</strong> in einem Tool.
+                </h4>
                 <p>Zusammenarbeit war nie einfacher: Chatten Sie von überall mit Kollegen und verschicken Sie Dateien in
                   Echtzeit. Starten
                   Sie innerhalb weniger Klicks Audio- oder Videokonferenzen und teilen Sie Ihren Bildschirm mit dem Team
                   oder externen
                   Teilnehmern. Erleben Sie Online-Meetings in bester Qualität, unabhängig von Gerät und Browser.
                 </p>
-                <a href="#" class="btn btn-primary w-100 w-lg-auto">Mehr zum Produkt erfahren</a>
               </div>
-              <div class="images">
-                <img src="assets/imgs/collaboration-1.avif" alt="cloudtelefonie image">
-              </div>
+              <a href="#" class="btn btn-primary w-100 w-lg-auto">Mehr zum Produkt erfahren</a>
             </div>
-            <div class="row features-collab">
-              <div class="images mb-5 mb-lg-0">
-                <img src="http://www.place-hold.it/750x500/dedede" alt="">
-              </div>
-              <div class="text-content">
-                <h4>Die <strong class="main-color">perfekte Lösung</strong> für dezentrales Arbeiten.</h4>
-                <div class="accordion" id="tab-2">
-                  <div class="accordion-item">
+            <div class="images d-flex flex-column justify-content-center align-items-start mh-500">
+              <img src="assets/imgs/collaboration-1.avif" alt="cloudtelefonie image" class="mh-100">
+            </div>
+          </div>
+          <div class="row row-cols-1 row-cols-lg-2 features-collab pt-5">
+            <div class="images mb-5 mb-lg-0 d-flex flex-column justify-content-center align-items-start mh-500">
+              <img src="http://www.place-hold.it/750x500/dedede" alt="" class="mh-100">
+            </div>
+            <div class="text-content d-flex flex-column justify-content-center align-items-start mh-500">
+              <h4 class="fs-2 fw-semibold mb-4 pb-3">Die <strong class="main-color">perfekte Lösung</strong> für
+                dezentrales Arbeiten.</h4>
+              <div class="accordion mw-100" id="tab-2">
+                <div class="accordion-item d-flex align-items-baseline bg-transparent border-0 mb-3">
+                  <div class="w-100">
                     <h2 class="accordion-header">
-                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#collapse-1-tab-2">
-                        <div><span class="icon"><img src="assets/imgs/chat.svg" alt=""></span><span
-                            class="title">Online-Meetings</span>
-                        </div>
-                        <span class="accordion-toggle-icon"></span>
+                      <button type="button"
+                        class="accordion-button collapsed bg-transparent border-0 p-2 shadow-none fs-5 fw-semibold"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-1-tab-2">
+                        <span class="d-flex align-items-center fs-4 me-3"><i class="fa-regular fa-message"></i></span>
+                        Online-Meetings
+                        <span class="accordion-toggle-icon position-relative ms-auto"></span>
                       </button>
                     </h2>
-                    <div id="collapse-1-tab-2" class="accordion-collapse collapse" data-bs-parent="#tab-2">
-                      <div class="accordion-body">
-                        <p>Mit nur wenigen Klicks können Sie spielend einfach HD Videokonferenzen in bisher nie
+                    <div id="collapse-1-tab-2" class="accordion-collapse h-100 collapse d-block"
+                      data-bs-parent="#tab-2">
+                      <div class="accordion-body p-0 ps-5">
+                        <p class="m-0 text-truncate mw-80">Mit nur wenigen Klicks können Sie spielend einfach HD
+                          Videokonferenzen in bisher nie
                           dagewesener Wiedergabequalität
                           starten. Sowohl interne als auch externe Teilnehmer können teilnehmen, ohne eine spezielle
                           Software installieren zu
@@ -503,19 +555,23 @@
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
+                </div>
+                <div class="accordion-item d-flex align-items-baseline bg-transparent border-0 mb-3">
+                  <div class="w-100">
                     <h2 class="accordion-header">
-                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#collapse-2-tab-2">
-                        <div><span class="icon"><img src="assets/imgs/chat.svg" alt=""></span><span
-                            class="title">Team-Messaging</span>
-                        </div>
-                        <span class="accordion-toggle-icon"></span>
+                      <button type="button"
+                        class="accordion-button collapsed bg-transparent border-0 p-2 shadow-none fs-5 fw-semibold"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-2-tab-2">
+                        <span class="d-flex align-items-center fs-4 me-3"><i class="fa-regular fa-message"></i></span>
+                        Team-Messaging
+                        <span class="accordion-toggle-icon position-relative ms-auto"></span>
                       </button>
                     </h2>
-                    <div id="collapse-2-tab-2" class="accordion-collapse collapse" data-bs-parent="#tab-2">
-                      <div class="accordion-body">
-                        <p>Ihre Kollegen können Sie direkt im 1:1 oder Gruppenchat anschreiben und über die
+                    <div id="collapse-2-tab-2" class="accordion-collapse h-100 collapse d-block"
+                      data-bs-parent="#tab-2">
+                      <div class="accordion-body p-0 ps-5">
+                        <p class="m-0 text-truncate mw-80">Ihre Kollegen können Sie direkt im 1:1 oder Gruppenchat
+                          anschreiben und über die
                           Presence-Funktion sehen, ob diese
                           gerade erreichbar oder unterwegs sind. Dateien können Sie im Chat blitzschnell per Drag & Drop
                           verschicken und in der
@@ -523,23 +579,27 @@
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
+                </div>
+                <div class="accordion-item d-flex align-items-baseline bg-transparent border-0">
+                  <div class="w-100">
                     <h2 class="accordion-header">
-                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#collapse-3-tab-2">
-                        <div><span class="icon"><img src="assets/imgs/chat.svg" alt=""></span><span class="title">Alles
-                            in einer
-                            Anwendung</span>
-                        </div>
-                        <span class="accordion-toggle-icon"></span>
+                      <button type="button"
+                        class="accordion-button collapsed bg-transparent border-0 p-2 shadow-none fs-5 fw-semibold"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-3-tab-2">
+                        <span class="d-flex align-items-center fs-4 me-3"><i class="fa-regular fa-message"></i></span>
+                        Alles in einer Anwendung
+                        <span class="accordion-toggle-icon position-relative ms-auto"></span>
                       </button>
                     </h2>
-                    <div id="collapse-3-tab-2" class="accordion-collapse collapse" data-bs-parent="#tab-2">
-                      <div class="accordion-body">
-                        <p>Ihre Meetings, Team-Chats und auch die Telefonanlage haben Sie mit dem Webex Client immer auf
+                    <div id="collapse-3-tab-2" class="accordion-collapse h-100 collapse d-block"
+                      data-bs-parent="#tab-2">
+                      <div class="accordion-body p-0 ps-5">
+                        <p class="m-0 text-truncate mw-80">Ihre Meetings, Team-Chats und auch die Telefonanlage haben
+                          Sie mit dem Webex Client immer auf
                           allen Geräten dabei und
                           synchronisiert. So sind Sie überall erreichbar und können von überall aus produktiv
-                          zusammenarbeiten.</p>
+                          zusammenarbeiten.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -551,185 +611,197 @@
       </div>
     </div>
   </section>
-  <section class="section-make-it-yours text-center">
-    <div class="container-fluid">
-      <div class="inner">
-        <div class="heading">
-          <h4 class="h1"><strong class="main-color">So einfach</strong> ist Placetel</h4>
-        </div>
-        <ul class="icons row row-cols-1 row-cols-lg-3 list-unstyled">
-          <li>
-            <div class="icon">
-              <svg enable-background="new 0 0 40 40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="m17.67 5.61c1.54-.01 2.79-1.26 2.8-2.8 0-1.55-1.25-2.8-2.8-2.8s-2.8 1.25-2.8 2.8 1.26 2.8 2.8 2.8zm0-3.76c.49.01.88.4.89.89 0 .49-.4.89-.89.89s-.89-.4-.89-.89.4-.89.89-.89z">
-                </path>
-                <path
-                  d="m24.81 5.61h.03c1.54-.01 2.78-1.26 2.77-2.8 0-1.55-1.25-2.8-2.8-2.8s-2.81 1.24-2.81 2.79 1.26 2.81 2.81 2.81zm0-3.76h.04c.48.01.86.41.85.89 0 .49-.4.89-.89.89s-.89-.4-.89-.89.4-.89.89-.89z">
-                </path>
-                <path
-                  d="m32 5.61h.03c1.54-.01 2.78-1.26 2.77-2.8 0-1.55-1.25-2.8-2.8-2.8s-2.8 1.25-2.8 2.8 1.26 2.8 2.8 2.8zm0-3.76h.04c.48.01.86.41.85.89 0 .49-.4.89-.89.89s-.89-.4-.89-.89.4-.89.89-.89z">
-                </path>
-                <path
-                  d="m17.67 12.74c1.54-.01 2.79-1.26 2.8-2.8 0-1.55-1.25-2.8-2.8-2.8s-2.8 1.25-2.8 2.8c0 1.54 1.26 2.8 2.8 2.8zm0-3.76c.49.01.88.4.89.89 0 .49-.4.89-.89.89s-.89-.4-.89-.89.4-.89.89-.89z">
-                </path>
-                <path
-                  d="m24.81 12.74h.03c1.54-.01 2.78-1.26 2.77-2.8 0-1.55-1.25-2.8-2.8-2.8s-2.81 1.25-2.81 2.8c0 1.54 1.26 2.8 2.81 2.8zm0-3.76h.04c.48.01.86.41.85.89 0 .49-.4.89-.89.89s-.89-.4-.89-.89.4-.89.89-.89z">
-                </path>
-                <path
-                  d="m32 12.74h.03c1.54-.01 2.78-1.26 2.77-2.8 0-1.55-1.25-2.8-2.8-2.8s-2.8 1.25-2.8 2.8c0 1.54 1.26 2.8 2.8 2.8zm0-3.76h.04c.48.01.86.41.85.89 0 .49-.4.89-.89.89s-.89-.4-.89-.89.4-.89.89-.89z">
-                </path>
-                <path
-                  d="m24.81 14.27c-1.55 0-2.8 1.25-2.8 2.8s1.25 2.8 2.8 2.8h.03c1.54-.01 2.78-1.26 2.77-2.8 0-1.55-1.25-2.8-2.8-2.8zm0 3.63c-.49 0-.89-.4-.89-.89s.4-.89.89-.89h.04c.48.01.86.41.85.89 0 .49-.4.89-.89.89z">
-                </path>
-                <path
-                  d="m32.01 14.27c-1.55 0-2.8 1.25-2.8 2.8s1.25 2.8 2.8 2.8h.03c1.54-.01 2.78-1.26 2.77-2.8 0-1.55-1.26-2.8-2.8-2.8zm0 3.63c-.49 0-.89-.4-.89-.89s.4-.89.89-.89h.04c.48.01.86.41.85.89 0 .49-.4.89-.89.89z">
-                </path>
-                <path
-                  d="m22.07 25.48-1.47 1.47v-10.13c0-1.62-1.31-2.93-2.93-2.93s-2.93 1.31-2.93 2.93v3.44h-1.14c-.91.03-1.73.57-2.1 1.4h-.77c-1.18.01-2.21.78-2.55 1.91-1.66.05-2.98 1.4-2.99 3.06v6.82c0 1.27.5 2.48 1.4 3.38l.64.63v1.53c0 .53.43.96.96.96s.96-.43.96-.96v-1.91c.01-.26-.08-.51-.26-.7l-.95-.95c-.54-.56-.84-1.29-.84-2.05v-6.69c0-.58.44-1.08 1.02-1.13v1.32.07c.02.51.45.91.96.89s.91-.45.89-.96v-2.16c0-.04 0-.08-.01-.13v-.19c.01-.42.35-.76.77-.77h.58v3.31c0 .53.43.95.95.95.53 0 .95-.43.95-.95v-4.27c0-.01 0-.01 0-.02.01-.24.21-.43.45-.42h1.14v4.65c0 .53.43.96.96.96s.96-.43.96-.96v-10c0-.01 0-.02 0-.03.01-.56.47-1.01 1.03-1s1.01.47 1 1.03v12.35c-.02.39.21.75.58.89.34.17.76.09 1.02-.19l3.12-3.12c.46-.45 1.19-.45 1.66 0 .07.07.13.19.07.26l-2.29 5.6c-.05.1-.11.18-.19.25l-2.8 2.8c-.45.44-.7 1.03-.7 1.66v1.66c.02.52.44.94.96.95h.05c.48-.01.86-.42.84-.9v-1.65c0-.12.05-.23.13-.31l2.8-2.81c.25-.26.44-.56.57-.89l2.29-5.6c.34-.8.17-1.74-.45-2.36-1.21-1.18-3.14-1.18-4.34.01z">
-                </path>
-              </svg>
-            </div>
-            <strong>Rufnummer mitnehmen.</strong>
-            <p class="description">
-              Auf Wunsch kümmern wir uns um die Portierung Ihrer bestehenden Rufnummer und sorgen für eine reibungslose
-              Migration. </p>
-          </li>
-          <li>
-            <div class="icon">
-              <svg enable-background="new 0 0 40 40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="m31.27 0h-22.54c-4.82.01-8.72 3.95-8.73 8.81v22.38c.01 4.86 3.91 8.8 8.73 8.81h22.54.09c4.8-.02 8.67-3.97 8.64-8.81v-22.38c-.01-4.86-3.91-8.8-8.73-8.81zm6.06 31.19c0 3.37-2.71 6.11-6.06 6.11h-22.54c-3.34 0-6.05-2.74-6.06-6.11v-22.38c0-3.37 2.71-6.11 6.06-6.11h22.54c3.34 0 6.05 2.74 6.06 6.11z">
-                </path>
-                <path
-                  d="m19.95 7.91c-5.81 0-10.51 4.75-10.51 10.61v12.4c.02.74.61 1.33 1.34 1.35h5.26.09c.74-.05 1.29-.69 1.24-1.43v-2.07c.84.26 1.71.38 2.58.36 5.81 0 10.51-4.75 10.51-10.61.01-5.86-4.7-10.61-10.51-10.61zm.01 18.61c-1.18 0-2.33-.28-3.39-.81-.4-.2-.88-.16-1.25.09-.37.27-.6.7-.63 1.17v2.61h-2.58v-10.97c0-4.37 3.51-7.91 7.84-7.91s7.84 3.54 7.84 7.91c.01 4.36-3.5 7.91-7.83 7.91z">
-                </path>
-                <path
-                  d="m20.04 13.21c-2.9 0-5.26 2.37-5.26 5.3s2.35 5.3 5.26 5.3c2.89-.04 5.22-2.39 5.26-5.3 0-2.92-2.35-5.3-5.26-5.3zm0 7.82c-1.43 0-2.58-1.17-2.58-2.61s1.16-2.61 2.58-2.61c1.4.06 2.52 1.19 2.58 2.61.01 1.45-1.15 2.61-2.58 2.61z">
-                </path>
-              </svg>
-            </div>
-            <strong>Flexibel erweiterbar.</strong>
-            <p class="description">
-              Integrationen, Mobilfunk oder Collaboration - Placetel wächst mit und passt sich Ihren Bedürfnissen an.
-            </p>
-          </li>
-          <li>
-            <div class="icon"><svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 110.01 110.01"
-                style="enable-background:new 0 0 110.01 110.01;" xml:space="preserve">
-                <g>
-                  <path class="st0"
-                    d="M57.36,27.81H21.15c-1.25,0-2.27,1.07-2.27,2.38c0,0.64,0.24,1.23,0.67,1.68c0.43,0.45,1,0.7,1.6,0.7
-            		c0,0,0,0,0,0h36.21c0,0,0,0,0,0c0.61,0,1.18-0.25,1.61-0.7c0.43-0.45,0.67-1.05,0.67-1.68C59.63,28.88,58.61,27.81,57.36,27.81z">
-                  </path>
-                  <path class="st0" d="M59.63,48.08L59.63,48.08c0-1.31-1.02-2.38-2.27-2.38H21.15c-1.25,0-2.27,1.07-2.27,2.38
-            		c0,1.31,1.02,2.38,2.27,2.38h36.21C58.61,50.46,59.63,49.39,59.63,48.08z"></path>
-                  <path class="st0" d="M21.15,81.48c-1.25,0-2.27,1.07-2.27,2.38s1.02,2.38,2.27,2.38h14.6c1.25,0,2.27-1.07,2.27-2.38
-            		s-1.02-2.38-2.27-2.38H21.15z"></path>
-                  <path class="st0" d="M70.75,97.85c0,0.84-0.65,1.52-1.45,1.52H9.21c-0.8,0-1.45-0.68-1.45-1.52V16.2c0-0.84,0.65-1.52,1.45-1.52
-            		h60.09c0.8,0,1.45,0.68,1.45,1.52v21.53l4.55-4.76V16.2c0-3.46-2.69-6.27-6-6.27H9.21c-3.3,0-5.99,2.82-6,6.27v81.65
-            		c0,3.46,2.69,6.27,6,6.28h60.09c3.3,0,5.99-2.82,6-6.28V67.21l-4.55,4.76L70.75,97.85z"></path>
-                  <path class="st0" d="M46.25,63.59h-25.1c0,0,0,0,0,0c-0.61,0-1.18,0.25-1.6,0.7c-0.43,0.45-0.67,1.05-0.67,1.68
-            		c0,1.31,1.02,2.38,2.27,2.38h23.17L46.25,63.59z"></path>
-                  <path class="st0" d="M106.69,27.33l-9.65-10.09c-0.88-0.92-2.33-0.92-3.21,0l-45.01,47.1c-0.16,0.18-0.3,0.38-0.4,0.61L41.2,82.65
-            		c-0.37,0.9-0.18,1.92,0.48,2.61c0.42,0.44,1.01,0.7,1.61,0.7c0.31,0,0.61-0.07,0.89-0.19l16.68-7.43l0.24-0.12
-            		c0.21-0.11,0.41-0.25,0.59-0.43l37.62-39.36l0.31-0.01V38.1l7.08-7.41c0.43-0.45,0.66-1.05,0.66-1.68
-            		C107.36,28.38,107.12,27.78,106.69,27.33z M56.09,75.3l-8.5,3.78l3.62-8.89L56.09,75.3z M94.63,36.59L60.07,72.75l-6.43-6.73
-            		l34.56-36.16L94.63,36.59z M101.87,29.02l-4.02,4.2l-6.43-6.73l4.02-4.2L101.87,29.02z"></path>
-                </g>
-              </svg></div>
-            <strong>Monatlich kündbar.</strong>
-            <p class="description">
-              Flexible Business-Kommunikation erfordert flexible Verträge. Daher gibt es bei uns keine
-              Mindestvertragslaufzeit.
-            </p>
-          </li>
-        </ul>
-        <a href="#" class="btn btn-primary w-100 w-lg-auto">Jetzt 30 Tage kostenlos testen</a>
-        <div class="call2action-text">Keine Zahlungsdaten erforderlich</div>
+  <!-- Icons Section -->
+  <section class="section-make-it-yours text-center py-5">
+    <div class="container-fluid mb-5">
+      <div class="heading mb-4 pb-1 pb-lg-2">
+        <h4 class="fw-bold display-5 mb-0 mb-lg-5"><strong class="main-color">So einfach</strong> ist Placetel</h4>
       </div>
+      <ul class="icons row row-cols-1 row-cols-lg-3 list-unstyled g-4 py-5 mt-0 mb-4">
+        <li>
+          <div class="icon mb-4 pb-2">
+            <svg enable-background="new 0 0 40 40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m17.67 5.61c1.54-.01 2.79-1.26 2.8-2.8 0-1.55-1.25-2.8-2.8-2.8s-2.8 1.25-2.8 2.8 1.26 2.8 2.8 2.8zm0-3.76c.49.01.88.4.89.89 0 .49-.4.89-.89.89s-.89-.4-.89-.89.4-.89.89-.89z">
+              </path>
+              <path
+                d="m24.81 5.61h.03c1.54-.01 2.78-1.26 2.77-2.8 0-1.55-1.25-2.8-2.8-2.8s-2.81 1.24-2.81 2.79 1.26 2.81 2.81 2.81zm0-3.76h.04c.48.01.86.41.85.89 0 .49-.4.89-.89.89s-.89-.4-.89-.89.4-.89.89-.89z">
+              </path>
+              <path
+                d="m32 5.61h.03c1.54-.01 2.78-1.26 2.77-2.8 0-1.55-1.25-2.8-2.8-2.8s-2.8 1.25-2.8 2.8 1.26 2.8 2.8 2.8zm0-3.76h.04c.48.01.86.41.85.89 0 .49-.4.89-.89.89s-.89-.4-.89-.89.4-.89.89-.89z">
+              </path>
+              <path
+                d="m17.67 12.74c1.54-.01 2.79-1.26 2.8-2.8 0-1.55-1.25-2.8-2.8-2.8s-2.8 1.25-2.8 2.8c0 1.54 1.26 2.8 2.8 2.8zm0-3.76c.49.01.88.4.89.89 0 .49-.4.89-.89.89s-.89-.4-.89-.89.4-.89.89-.89z">
+              </path>
+              <path
+                d="m24.81 12.74h.03c1.54-.01 2.78-1.26 2.77-2.8 0-1.55-1.25-2.8-2.8-2.8s-2.81 1.25-2.81 2.8c0 1.54 1.26 2.8 2.81 2.8zm0-3.76h.04c.48.01.86.41.85.89 0 .49-.4.89-.89.89s-.89-.4-.89-.89.4-.89.89-.89z">
+              </path>
+              <path
+                d="m32 12.74h.03c1.54-.01 2.78-1.26 2.77-2.8 0-1.55-1.25-2.8-2.8-2.8s-2.8 1.25-2.8 2.8c0 1.54 1.26 2.8 2.8 2.8zm0-3.76h.04c.48.01.86.41.85.89 0 .49-.4.89-.89.89s-.89-.4-.89-.89.4-.89.89-.89z">
+              </path>
+              <path
+                d="m24.81 14.27c-1.55 0-2.8 1.25-2.8 2.8s1.25 2.8 2.8 2.8h.03c1.54-.01 2.78-1.26 2.77-2.8 0-1.55-1.25-2.8-2.8-2.8zm0 3.63c-.49 0-.89-.4-.89-.89s.4-.89.89-.89h.04c.48.01.86.41.85.89 0 .49-.4.89-.89.89z">
+              </path>
+              <path
+                d="m32.01 14.27c-1.55 0-2.8 1.25-2.8 2.8s1.25 2.8 2.8 2.8h.03c1.54-.01 2.78-1.26 2.77-2.8 0-1.55-1.26-2.8-2.8-2.8zm0 3.63c-.49 0-.89-.4-.89-.89s.4-.89.89-.89h.04c.48.01.86.41.85.89 0 .49-.4.89-.89.89z">
+              </path>
+              <path
+                d="m22.07 25.48-1.47 1.47v-10.13c0-1.62-1.31-2.93-2.93-2.93s-2.93 1.31-2.93 2.93v3.44h-1.14c-.91.03-1.73.57-2.1 1.4h-.77c-1.18.01-2.21.78-2.55 1.91-1.66.05-2.98 1.4-2.99 3.06v6.82c0 1.27.5 2.48 1.4 3.38l.64.63v1.53c0 .53.43.96.96.96s.96-.43.96-.96v-1.91c.01-.26-.08-.51-.26-.7l-.95-.95c-.54-.56-.84-1.29-.84-2.05v-6.69c0-.58.44-1.08 1.02-1.13v1.32.07c.02.51.45.91.96.89s.91-.45.89-.96v-2.16c0-.04 0-.08-.01-.13v-.19c.01-.42.35-.76.77-.77h.58v3.31c0 .53.43.95.95.95.53 0 .95-.43.95-.95v-4.27c0-.01 0-.01 0-.02.01-.24.21-.43.45-.42h1.14v4.65c0 .53.43.96.96.96s.96-.43.96-.96v-10c0-.01 0-.02 0-.03.01-.56.47-1.01 1.03-1s1.01.47 1 1.03v12.35c-.02.39.21.75.58.89.34.17.76.09 1.02-.19l3.12-3.12c.46-.45 1.19-.45 1.66 0 .07.07.13.19.07.26l-2.29 5.6c-.05.1-.11.18-.19.25l-2.8 2.8c-.45.44-.7 1.03-.7 1.66v1.66c.02.52.44.94.96.95h.05c.48-.01.86-.42.84-.9v-1.65c0-.12.05-.23.13-.31l2.8-2.81c.25-.26.44-.56.57-.89l2.29-5.6c.34-.8.17-1.74-.45-2.36-1.21-1.18-3.14-1.18-4.34.01z">
+              </path>
+            </svg>
+          </div>
+          <h4 class="fs-4 fw-bold mb-3">Rufnummer mitnehmen.</h4>
+          <p class="description m-auto">
+            Auf Wunsch kümmern wir uns um die Portierung Ihrer bestehenden Rufnummer und sorgen für eine reibungslose
+            Migration.</p>
+        </li>
+        <li class="pt-2 pt-lg-0">
+          <div class="icon mb-4 pb-2">
+            <svg enable-background="new 0 0 40 40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m31.27 0h-22.54c-4.82.01-8.72 3.95-8.73 8.81v22.38c.01 4.86 3.91 8.8 8.73 8.81h22.54.09c4.8-.02 8.67-3.97 8.64-8.81v-22.38c-.01-4.86-3.91-8.8-8.73-8.81zm6.06 31.19c0 3.37-2.71 6.11-6.06 6.11h-22.54c-3.34 0-6.05-2.74-6.06-6.11v-22.38c0-3.37 2.71-6.11 6.06-6.11h22.54c3.34 0 6.05 2.74 6.06 6.11z">
+              </path>
+              <path
+                d="m19.95 7.91c-5.81 0-10.51 4.75-10.51 10.61v12.4c.02.74.61 1.33 1.34 1.35h5.26.09c.74-.05 1.29-.69 1.24-1.43v-2.07c.84.26 1.71.38 2.58.36 5.81 0 10.51-4.75 10.51-10.61.01-5.86-4.7-10.61-10.51-10.61zm.01 18.61c-1.18 0-2.33-.28-3.39-.81-.4-.2-.88-.16-1.25.09-.37.27-.6.7-.63 1.17v2.61h-2.58v-10.97c0-4.37 3.51-7.91 7.84-7.91s7.84 3.54 7.84 7.91c.01 4.36-3.5 7.91-7.83 7.91z">
+              </path>
+              <path
+                d="m20.04 13.21c-2.9 0-5.26 2.37-5.26 5.3s2.35 5.3 5.26 5.3c2.89-.04 5.22-2.39 5.26-5.3 0-2.92-2.35-5.3-5.26-5.3zm0 7.82c-1.43 0-2.58-1.17-2.58-2.61s1.16-2.61 2.58-2.61c1.4.06 2.52 1.19 2.58 2.61.01 1.45-1.15 2.61-2.58 2.61z">
+              </path>
+            </svg>
+          </div>
+          <h4 class="fs-4 fw-bold mb-">Flexibel erweiterbar.</h4>
+          <p class="description m-auto">
+            Integrationen, Mobilfunk oder Collaboration - Placetel wächst mit und passt sich Ihren Bedürfnissen an.
+          </p>
+        </li>
+        <li class="pt-2 pt-lg-0">
+          <div class="icon mb-4 pb-2">
+            <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 110.01 110.01"
+              style="enable-background:new 0 0 110.01 110.01;" xml:space="preserve">
+              <g>
+                <path class="st0"
+                  d="M57.36,27.81H21.15c-1.25,0-2.27,1.07-2.27,2.38c0,0.64,0.24,1.23,0.67,1.68c0.43,0.45,1,0.7,1.6,0.7
+              c0,0,0,0,0,0h36.21c0,0,0,0,0,0c0.61,0,1.18-0.25,1.61-0.7c0.43-0.45,0.67-1.05,0.67-1.68C59.63,28.88,58.61,27.81,57.36,27.81z">
+                </path>
+                <path class="st0" d="M59.63,48.08L59.63,48.08c0-1.31-1.02-2.38-2.27-2.38H21.15c-1.25,0-2.27,1.07-2.27,2.38
+              c0,1.31,1.02,2.38,2.27,2.38h36.21C58.61,50.46,59.63,49.39,59.63,48.08z"></path>
+                <path class="st0" d="M21.15,81.48c-1.25,0-2.27,1.07-2.27,2.38s1.02,2.38,2.27,2.38h14.6c1.25,0,2.27-1.07,2.27-2.38
+              s-1.02-2.38-2.27-2.38H21.15z"></path>
+                <path class="st0" d="M70.75,97.85c0,0.84-0.65,1.52-1.45,1.52H9.21c-0.8,0-1.45-0.68-1.45-1.52V16.2c0-0.84,0.65-1.52,1.45-1.52
+              h60.09c0.8,0,1.45,0.68,1.45,1.52v21.53l4.55-4.76V16.2c0-3.46-2.69-6.27-6-6.27H9.21c-3.3,0-5.99,2.82-6,6.27v81.65
+              c0,3.46,2.69,6.27,6,6.28h60.09c3.3,0,5.99-2.82,6-6.28V67.21l-4.55,4.76L70.75,97.85z"></path>
+                <path class="st0" d="M46.25,63.59h-25.1c0,0,0,0,0,0c-0.61,0-1.18,0.25-1.6,0.7c-0.43,0.45-0.67,1.05-0.67,1.68
+              c0,1.31,1.02,2.38,2.27,2.38h23.17L46.25,63.59z"></path>
+                <path class="st0" d="M106.69,27.33l-9.65-10.09c-0.88-0.92-2.33-0.92-3.21,0l-45.01,47.1c-0.16,0.18-0.3,0.38-0.4,0.61L41.2,82.65
+              c-0.37,0.9-0.18,1.92,0.48,2.61c0.42,0.44,1.01,0.7,1.61,0.7c0.31,0,0.61-0.07,0.89-0.19l16.68-7.43l0.24-0.12
+              c0.21-0.11,0.41-0.25,0.59-0.43l37.62-39.36l0.31-0.01V38.1l7.08-7.41c0.43-0.45,0.66-1.05,0.66-1.68
+              C107.36,28.38,107.12,27.78,106.69,27.33z M56.09,75.3l-8.5,3.78l3.62-8.89L56.09,75.3z M94.63,36.59L60.07,72.75l-6.43-6.73
+              l34.56-36.16L94.63,36.59z M101.87,29.02l-4.02,4.2l-6.43-6.73l4.02-4.2L101.87,29.02z"></path>
+              </g>
+            </svg>
+          </div>
+          <h4 class="fs-4 fw-bold mb-">Monatlich kündbar.</h4>
+          <p class="description m-auto">
+            Flexible Business-Kommunikation erfordert flexible Verträge. Daher gibt es bei uns keine
+            Mindestvertragslaufzeit.
+          </p>
+        </li>
+      </ul>
+      <a href="#" class="btn btn-primary w-100 w-lg-auto my-2">Jetzt 30 Tage kostenlos testen</a>
+      <small class="d-block">Keine Zahlungsdaten erforderlich</small>
     </div>
   </section>
-  <section class="section-why-placetel">
+  <!-- section-why-placetel -->
+  <section class="section-why-placetel py-5">
     <div class="container-fluid">
-      <div class="inner">
-        <div class="text-content">
-          <div class="heading">
-            <h5 class="h5">Technologie vom Marktführer</h5>
-            <h4 class="h4">Wir sind Teil der <strong class="text-white">Cisco-Familie.</strong></h4>
-          </div>
-          <p>Unser langjähriger Erfolg auf dem Gebiet der Cloud-Telefonie hat uns zu dem verholfen, was wir heute sind:
+      <div class="inner g-0 row row-cols-1 row-cols-2 my-5">
+        <div
+          class="text-content bg-main-color position-relative d-flex flex-column justify-content-center z-1 mb-5 mb-lg-0 p-4 w-100">
+          <h5 class="fs-4 mb-3">Technologie vom Marktführer</h5>
+          <h4 class="fs-2 fw-semibold mb-4 pb-lg-3">Wir sind Teil der <strong class="text-white">Cisco-Familie.</strong>
+          </h4>
+          <p class="m-0">Unser langjähriger Erfolg auf dem Gebiet der Cloud-Telefonie hat uns zu dem verholfen, was wir
+            heute sind:
             <strong>Ein Teil von Cisco – dem Technologie- und Weltmarktführer.</strong>
           </p>
-          <div class="brand-logo">
-            <img src="assets/imgs/a_part_of_cisco.avif">
+          <div class="brand-logo mt-4 pt-2">
+            <img src="assets/imgs/a_part_of_cisco.avif" alt="A part of cisco">
           </div>
         </div>
-        <div class="images">
-          <img src="http://www.place-hold.it/1000x600/dedede" alt="">
+        <div class="images w-100 position-relative px-4 px-lg-0">
+          <img src="http://www.place-hold.it/980x650/dedede" alt="Placeholder Image">
         </div>
       </div>
     </div>
   </section>
-  <section class="section-testimonials">
+  <!-- Testimonials section -->
+  <section class="section-testimonials py-5">
     <div class="container-fluid">
-      <div class="inner">
-        <div id="carousel-testimonials" class="carousel slide">
-          <div class="arrows">
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-testimonials"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <div class="inner py-5">
+        <div id="carousel-testimonials" class="carousel slide m-auto">
+          <div class="arrows d-none d-lg-flex align-items-center justify-content-between h-100 position-absolute">
+            <button class="position-relative opacity-100 w-auto carousel-control-prev" type="button"
+              data-bs-target="#carousel-testimonials" data-bs-slide="prev">
+              <span
+                class="carousel-control-prev-icon rounded-circle text-center position-relative d-flex justify-content-center align-items-center"
+                aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel-testimonials"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button class="position-relative opacity-100 w-auto carousel-control-next" type="button"
+              data-bs-target="#carousel-testimonials" data-bs-slide="next">
+              <span
+                class="carousel-control-next-icon rounded-circle text-center position-relative d-flex justify-content-center align-items-center"
+                aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="customer-img">
-                <img src="assets/imgs/customer-1.avif" alt="customer 1">
+            <div class="carousel-item px-3 text-center active">
+              <div class="customer-img mb-4">
+                <img src="assets/imgs/customer-1.avif" alt="customer 1" class="rounded-circle">
               </div>
-              <div class="customer-quote">
+              <div class="customer-quote mb-4 fs-6">
                 Mit Placetel konnten wir auch unsere spezielle Anforderung schnell umsetzen. Dank API und
                 Mobilfunkintegration erreichen
                 Bestandskunden automatisch die zugeteilten Ansprechpartner – auch wenn diese unterwegs sind.</div>
-              <div class="name">Boris Polenske</div>
-              <div class="logo">
-                <img src="assets/imgs/123fahrschule-logo.png" alt="">
+              <small class="name mb-4 d-block">Boris Polenske</small>
+              <div class="logo mx-auto">
+                <img src="assets/imgs/123fahrschule-logo.png" alt="" class="w-100">
               </div>
             </div>
-            <div class="carousel-item">
-              <div class="customer-img">
-                <img src="assets/imgs/customer-2.avif" alt="customer 2">
+            <div class="carousel-item px-3 text-center">
+              <div class="customer-img mb-4">
+                <img src="assets/imgs/customer-2.avif" alt="customer 2" class="rounded-circle">
               </div>
-              <div class="customer-quote">Dank Placetel und der MS-Team Integration konnten wir unseren Kundinnen und
+              <div class="customer-quote mb-4 fs-6">Dank Placetel und der MS-Team Integration konnten wir unseren
+                Kundinnen
+                und
                 Kunden trotz Pandemie denselben Service
                 bieten – egal, ob im Büro oder Homeoffice.</div>
-              <div class="name">Christian Limmer</div>
-              <div class="logo">
-                <img src="assets/imgs/logo_constares.png" alt="">
+              <small class="name mb-4 d-block">Christian Limmer</small>
+              <div class="logo mx-auto">
+                <img src="assets/imgs/logo_constares.png" alt="" class="w-100">
               </div>
             </div>
-            <div class="carousel-item">
-              <div class="customer-img">
-                <img src="assets/imgs/customer-3.avif" alt="customer 3">
+            <div class="carousel-item px-3 text-center">
+              <div class="customer-img mb-4">
+                <img src="assets/imgs/customer-3.avif" alt="customer 3" class="rounded-circle">
               </div>
-              <div class="customer-quote">Für uns sind die individuellen Weiterleitungen und die Einrichtung der
+              <div class="customer-quote mb-4 fs-6">Für uns sind die individuellen Weiterleitungen und die Einrichtung
+                der
                 Kundenhotline von großem Nutzen. So ist
-                gewährleistet, dass kein Anruf mehr verpasst wird und wir unsere Kundenanfragen sogar an den Feiertagen
+                gewährleistet, dass kein Anruf mehr verpasst wird und wir unsere Kundenanfragen sogar an den
+                Feiertagen
                 entgegennehmen
                 können.</div>
-              <div class="name">Jan Kiefer</div>
-              <div class="logo">
-                <img src="assets/imgs/bonduelle.svg" alt="">
+              <h4 class="name mb-4 d-block small">Jan Kiefer</h4>
+              <div class="logo mx-auto">
+                <img src="assets/imgs/bonduelle.svg" alt="" class="w-100">
               </div>
             </div>
           </div>
-          <div class="carousel-indicators">
+          <div class="carousel-indicators d-fkex justify-content-center position-relative my-3">
             <button type="button" data-bs-target="#carousel-testimonials" data-bs-slide-to="0" class="active"
               aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carousel-testimonials" data-bs-slide-to="1"
@@ -741,59 +813,58 @@
       </div>
     </div>
   </section>
-  <section class="fullwithimage">
-    <div class="image-holder"></div>
+  <!-- Full image section -->
+  <section
+    class="fullwithimage overflow-hidden position-relative d-flex flex-column justify-content-center align-items-center">
+    <div class="image-holder position-absolute w-100"></div>
     <div class="container-fluid">
-      <div class="inner">
-        <h4 class="h1">Unsere Produktexperten helfen Ihnen, die individuelle Placetel-Lösung für Ihr Unternehmen
-          zusammenzustellen und geben Ihnen eine Übersicht zu Ihren Kosten und Einsparpotentialen.</h4>
-        <div class="call2action-box w-100 w-lg-auto">
+      <div class="inner d-flex flex-column justify-content-center align-items-center">
+        <h4 class="z-1 mx-auto text-white px-lg-5 fs-2 text-center fw-bold mb-4 pb-2">Unsere Produktexperten helfen
+          Ihnen, die individuelle Placetel-Lösung für Ihr Unternehmen zusammenzustellen und geben Ihnen eine Übersicht
+          zu Ihren Kosten und Einsparpotentialen.</h4>
+        <div class="call2action-box w-100 w-lg-auto text-center d-inline-flex flex-column flex-wrap z-1">
           <a href="#" class="btn btn-outline-white">Vertrieb kontaktieren</a>
-          <div class="call2action-text">Oder anrufen 0221 29 191 999</div>
+          <small class="mt-2 d-inline-flex text-white mx-auto">Oder anrufen 0221 29 191 999</small>
         </div>
       </div>
     </div>
   </section>
-  <section class="was-ist-eine-cloud-telefonanlage">
+  <!-- was section -->
+  <section class="was-ist-eine-cloud-telefonanlage position-relative overflow-hidden">
     <div class="container-fluid">
       <div class="inner row row-cols-1 row-cols-lg-2">
-        <div class="text-content pb-4">
-          <h5>
-            <div class="d-flex align-items-center">
-              <div class="icon">
-                <img src="assets/imgs/chat.svg" alt="">
-              </div>
-              <div>Definition einer Cloud-Telefonanlage</div>
+        <div class="text-content pb-4 fs-6">
+          <div class="d-flex align-items-center mb-3">
+            <div class="icon mr-2 d-flex align-items-center main-color fs-3">
+              <i class="fa-regular fa-message"></i>
             </div>
-          </h5>
-          <p>Eine Cloud-Telefonanlage ist eine softwarebasierte Telefonie-Lösung, bei der <strong>alle
+            <h5 class="fw-semibold mb-0">Definition einer Cloud-Telefonanlage</h5>
+          </div>
+          <p class="mb-4">Eine Cloud-Telefonanlage ist eine softwarebasierte Telefonie-Lösung, bei der <strong>alle
               Funktionen</strong> einer
             üblichen TK-Anlage<strong> im Rechenzentrum eines Providers gehostet</strong> und über das
             <strong>Internet mittels
               VoIP</strong> (Voice over IP) bereitgestellt werden.
           </p>
-          <h5>
-            <div class="d-flex align-items-center">
-              <div class="icon">
-                <img src="assets/imgs/chat.svg" alt="">
-              </div>
-              <div>Voraussetzungen für Cloud-Telefonanlagen</div>
+          <div class="d-flex align-items-center mb-3">
+            <div class="icon mr-2 d-flex align-items-center main-color fs-3">
+              <i class="fa-regular fa-message"></i>
             </div>
-          </h5>
-          <p>Für Telefonanlagen aus der Cloud, auch Hosted PBX (Private Branch Exchange) oder IP Centrex genannt, sind
+            <h5 class="fw-semibold mb-0">Voraussetzungen für Cloud-Telefonanlagen</h5>
+          </div>
+          <p class="mb-4">Für Telefonanlagen aus der Cloud, auch Hosted PBX (Private Branch Exchange) oder IP Centrex
+            genannt, sind
             weder
             analoge Telefonleitungen, ISDN oder PMX-Anlagenanschlüsse noch Hardware erforderlich. Lediglich ein
             herkömmlicher
             DSL-Anschluss wird zum Betreiben virtueller Telefonanlagen benötigt.</p>
-          <h5>
-            <div class="d-flex align-items-center">
-              <div class="icon">
-                <img src="assets/imgs/chat.svg" alt="">
-              </div>
-              <div>Vorteile einer Cloud-Telefonanlage</div>
+          <div class="d-flex align-items-center mb-3">
+            <div class="icon mr-2 d-flex align-items-center main-color fs-3">
+              <i class="fa-regular fa-message"></i>
             </div>
-          </h5>
-          <p>Cloud-TK-Lösungen eignen sich sowohl für kleine- und mittelständische Unternehmen als auch für
+            <h5 class="fw-semibold mb-0">Vorteile einer Cloud-Telefonanlage</h5>
+          </div>
+          <p class="mb-4">Cloud-TK-Lösungen eignen sich sowohl für kleine- und mittelständische Unternehmen als auch für
             Großunternehmen und sorgen für <strong>maximale Flexibilität und Ortsunabhängigkeit</strong>. So können
             Sie laufend die Anzahl der Nutzer - dem Wachstum Ihres Business entsprechend - anpassen. Der große Vorteil
             dabei: Sie <strong>zahlen nur für die Nebenstellen, die auch wirklich genutzt werden</strong>. Des
@@ -801,38 +872,44 @@
             Telefonanlage zuzugreifen. Durch Cloud Telefonanlagen können zudem Kostenersparnisse realisiert werden, da
             teure Hardwareinvestitionen sowie Wartungskosten entfallen. Mit Features wie Unified Communications
             übertreffen virtuelle Telefonanlagen bei Weitem die Funktionen herkömmlicher Telefonanlagen.</p>
-          <p>Die Cloud-Telefonanlage von Placetel bietet Ihnen über 150 leistungsstarke Funktionen. Placetel ist ein
+          <p class="mb-4">Die Cloud-Telefonanlage von Placetel bietet Ihnen über 150 leistungsstarke Funktionen.
+            Placetel ist ein
             führender Anbieter von Telefonanlagen aus der Cloud, der seit 2018 zu Cisco gehört. Die mehrfach
             ausgezeichnete Placetel Telefonanlage richtet sich sowohl an kleine als auch an große Unternehmen.</p>
-          <hr>
-          <p>Sie möchten mehr über Cloud-Telefonanlagen erfahren? Dann schauen Sie doch mal bei unserem umfangreichen
-            <a href="#">VoIP Ratgeber</a> vorbei.
+          <hr class="opacity-100 my-5">
+          <p class="m-0">Sie möchten mehr über Cloud-Telefonanlagen erfahren? Dann schauen Sie doch mal bei unserem
+            umfangreichen
+            <a href="#" class="fw-normal text-decoration-none">VoIP Ratgeber</a> vorbei.
           </p>
         </div>
         <div class="images pb-4 pb-lg-0">
-          <img src="assets/imgs/cloud-telefonanlage-grafik.png
-          " alt="">
+          <img src="assets/imgs/cloud-telefonanlage-grafik.png" alt="">
         </div>
       </div>
     </div>
   </section>
-  <section class="faq">
+  <!-- FAQ Section -->
+  <section class="faq overflow-hidden py-5">
     <div class="container-fluid">
-      <div class="inner">
-        <div class="heading text-center">
-          <h2>Cloud-Telefonanlagen FAQ</h2>
-          <h3>Haben Sie noch Fragen zu Placetel? Wir beantworten sie.</h3>
+      <div class="inner py-4">
+        <div class="heading text-center mb-4 pb-2">
+          <h2 class="fw-bold fs-2 mb-4 pb-2">Cloud-Telefonanlagen FAQ</h2>
+          <h3 class="mb-3 fs-2 fw-light">Haben Sie noch Fragen zu Placetel? Wir beantworten sie.</h3>
         </div>
         <div class="row m-0 accordion-wrapper row-cols-1 row-cols-lg-2">
-          <div class="accordion accordion-flush" id="faq-col-1">
-            <div class="accordion-item">
+          <div class="accordion accordion-flush m-0" id="faq-col-1">
+            <div class="accordion-item pb-0 bg-transparent">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq-collpase-1">Wo ist der
+                <button
+                  class="shadow-none border-0 accordion-button collapsed d-flex justify-content-between align-items-center bg-transparent px-0 py-3 fw-semibold fs-5"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-collpase-1">Wo ist der
                   Unterschied zwischen Cloud- und VoIP-TK-Anlage?</button>
               </h2>
               <div id="faq-collpase-1" class="accordion-collapse collapse" data-bs-parent="#faq-col-1">
-                <div class="accordion-body">Während es bei der Cloud-Telefonanlage keine physische Anlage gibt und alle
+                <div class="accordion-body fw-normal p-0 pb-5 fs-6">Während es bei der Cloud-Telefonanlage keine
+                  physische
+                  Anlage gibt
+                  und alle
                   Funktionalitäten von einem Provider über ein
                   Rechenzentrum zur Verfügung gestellt werden, kann mit einer VoIP-Telefonanlage sowohl eine gehostete
                   Telefonanlage als
@@ -842,13 +919,18 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item pb-0 bg-transparent">
               <h2 class="accordion-header">
-                <button class=" accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq-collpase-2">Wie funktioniert Placetel?</button>
+                <button
+                  class="shadow-none border-0 accordion-button collapsed d-flex justify-content-between align-items-center bg-transparent px-0 py-3 fw-semibold fs-5"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-collpase-2">Wie funktioniert
+                  Placetel?</button>
               </h2>
               <div id="faq-collpase-2" class="accordion-collapse collapse" data-bs-parent="#faq-col-1">
-                <div class="accordion-body">Als Unternehmen können Sie sich bei Placetel ganz einfach einen Account
+                <div class="accordion-body fw-normal p-0 pb-5 fs-6">Als Unternehmen können Sie sich bei Placetel ganz
+                  einfach
+                  einen
+                  Account
                   anlegen, sich Rufnummern bestellen oder Ihre
                   bestehenden mitnehmen und anschließend werden Ihnen sämtliche Funktionalitäten unserer virtuellen
                   Telefonanlage als
@@ -859,31 +941,38 @@
                   eine intuitive Weboberfläche vornehmen können.</div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item pb-0 bg-transparent">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq-collpase-3">Was kostet Placetel?</button>
+                <button
+                  class="shadow-none border-0 accordion-button collapsed d-flex justify-content-between align-items-center bg-transparent px-0 py-3 fw-semibold fs-5"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-collpase-3">Was kostet Placetel?</button>
               </h2>
               <div id="faq-collpase-3" class="accordion-collapse collapse" data-bs-parent="#faq-col-1">
-                <div class="accordion-body">Bei Placetel stehen Ihnen verschiedene Tarife zur Verfügung. Unsere
+                <div class="accordion-body fw-normal p-0 pb-5 fs-6">Bei Placetel stehen Ihnen verschiedene Tarife zur
+                  Verfügung.
+                  Unsere
                   Profi-Telefonanlage mit 150 professionellen
                   Telefonanlagen-Funktionen erhalten Sie bereits für 4,90 € mtl. pro Nebenstelle. Möchten Sie weitere
                   Funktionen wie Chat
                   oder Videokonferenzen nutzen, ist unser Webex für Placetel Produkt für 16,90 € mtl. pro User die
                   richtige Wahl. Am
-                  besten werfen Sie direkt einen Blick auf unsere <a href="#">Preis-Liste</a>.</div>
+                  besten werfen Sie direkt einen Blick auf unsere <a href="#"
+                    class="fw-normal text-decoration-none main-color">Preis-Liste</a>.</div>
               </div>
             </div>
           </div>
           <div class="accordion accordion-flush" id="faq-col-2">
-            <div class="accordion-item">
+            <div class="accordion-item pb-0 bg-transparent">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq-collpase-4">Ist
+                <button
+                  class="shadow-none border-0 accordion-button collapsed d-flex justify-content-between align-items-center bg-transparent px-0 py-3 fw-semibold fs-5"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-collpase-4">Ist
                   Placetel ein reiner Cloud-Telefonie Anbieter?</button>
               </h2>
               <div id="faq-collpase-4" class="accordion-collapse collapse" data-bs-parent="#faq-col-2">
-                <div class="accordion-body">Placetel wurde 2007 als moderne Alternative zur herkömmlichen analogen- und
+                <div class="accordion-body fw-normal p-0 pb-5 fs-6">Placetel wurde 2007 als moderne Alternative zur
+                  herkömmlichen
+                  analogen- und
                   ISDN-Telefonanlage gegründet und gehört zu
                   den ersten VoIP-Telefonanlagen Deutschlands. Daher findet man bei uns alle wichtigen, insgesamt über
                   150+ Telefonanlagen
@@ -895,33 +984,42 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item pb-0 bg-transparent">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq-collpase-5">Erhalte
+                <button
+                  class="shadow-none border-0 accordion-button collapsed d-flex justify-content-between align-items-center bg-transparent px-0 py-3 fw-semibold fs-5"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-collpase-5">Erhalte
                   ich bei Placetel eine eigene Rufnummer?</button>
               </h2>
               <div id="faq-collpase-5" class="accordion-collapse collapse" data-bs-parent="#faq-col-2">
-                <div class="accordion-body">Ja, Sie können bei Placetel entweder Rufnummern bestellen
+                <div class="accordion-body fw-normal p-0 pb-5 fs-6">Ja, Sie können bei Placetel entweder Rufnummern
+                  bestellen
                   (Ortsnetzrufnummern, Servicerufnummern, internationale
                   Rufnummern) oder Ihre bisherige Rufnummer kostenlos zu uns mitnehmen. Das geht ganz einfach mit
                   wenigen Klicks.
-                  Informieren Sie sich direkt auf unserer <a href="#">Rufnummern-Seite</a>.
+                  Informieren Sie sich direkt auf unserer <a href="#"
+                    class="fw-normal text-decoration-none main-color">Rufnummern-Seite</a>.
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item pb-0 bg-transparent">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq-collpase-6">Wie
+                <button
+                  class="shadow-none border-0 accordion-button collapsed d-flex justify-content-between align-items-center bg-transparent px-0 py-3 fw-semibold fs-5"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#faq-collpase-6">Wie
                   funktioniert der Wechsel in die Cloud?</button>
               </h2>
               <div id="faq-collpase-6" class="accordion-collapse collapse" data-bs-parent="#faq-col-2">
-                <div class="accordion-body">Der Wechsel auf eine Cloud-Telefonanlage ist ganz einfach und auch für Laien
+                <div class="accordion-body fw-normal p-0 pb-5 fs-6">Der Wechsel auf eine Cloud-Telefonanlage ist ganz
+                  einfach
+                  und auch
+                  für Laien
                   problemlos möglich. Einige Dinge sollten
                   vor dem Umstieg allerdings beachtet werden, weshalb wir Ihnen eine Checkliste vorbereitet haben, an
                   der Sie sich
-                  orientieren können. Werfen Sie dafür gerne einen Blick auf unseren <a href="#">Guide zum Wechsel in
+                  orientieren können. Werfen Sie dafür gerne einen Blick auf unseren <a href="#"
+                    class="fw-normal text-decoration-none main-color">Guide
+                    zum Wechsel in
                     die Cloud</a>.
                 </div>
               </div>
@@ -931,157 +1029,155 @@
       </div>
     </div>
   </section>
-  <footer>
-    <a href="#top" class="btn btn-primary" id="BackToTop">
-      Zurück zum Seitenanfang
-    </a>
+  <!-- Footer -->
+  <footer class="border-top border-white overflow-visible position-relative pb-5">
+    <a href="#top" class="btn btn-primary w-100 rounded-0 text-center border-2" id="BackToTop">Zurück zum
+      Seitenanfang</a>
     <div class="container-fluid">
-      <div class="inner">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 footer-row footer-top">
+      <div class="inner py-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 footer-row mb-4 pb-3 footer-top">
           <div class="footer-row-item">
-            <p>Unsere Produkte</p>
-            <ul>
-              <li>
+            <h6 class="fw-semibold mb-2 opacity-100 top-0 fs-6">Unsere Produkte</h6>
+            <ul class="list-unstyled p-0">
+              <li class="position-relative m-0">
                 <a href="#">Cloud-Telefonanlage</a>
               </li>
-              <li>
-                <a title="Team-Messaging" href="#">Team-Messaging</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Team-Messaging</a>
               </li>
-              <li>
-                <a href="#">Online-Meetings</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Online-Meetings</a>
               </li>
-              <li>
-                <a href="#">Team-Collaboration</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Team-Collaboration</a>
               </li>
-              <li>
-                <a href="#">Mobilfunk-Integration</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Mobilfunk-Integration</a>
               </li>
-              <li>
-                <a href="#">SIP-Trunk</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-row-item">
-            <h6>Lösungen für</h6>
-            <ul>
-              <li>
-                <a href="#">Homeoffice</a>
-              </li>
-              <li>
-                <a href="#">Startups</a>
-              </li>
-              <li>
-                <a href="#">Kleine Unternehmen</a>
-              </li>
-              <li>
-                <a href="#">Mittelständler</a>
-              </li>
-              <li>
-                <a href="#">Große Unternehmen</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">SIP-Trunk</a>
               </li>
             </ul>
           </div>
           <div class="footer-row-item">
-            <h6>Entdecken</h6>
-            <ul>
-              <li>
-                <a href="#">Preise</a>
+            <h6 class="fw-semibold mb-2 opacity-100 top-0 fs-6">Lösungen für</h6>
+            <ul class="list-unstyled p-0">
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Homeoffice</a>
               </li>
-              <li>
-                <a href="#">Funktionen</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Startups</a>
               </li>
-              <li>
-                <a href="#">Integrationen</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Kleine Unternehmen</a>
               </li>
-              <li>
-                <a href="#">Endgeräte</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Mittelständler</a>
               </li>
-              <li>
-                <a href="#">Rufnummern</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Große Unternehmen</a>
               </li>
-              <li>
-                <a href="#">Geräte & Clients</a>
+            </ul>
+          </div>
+          <div class="footer-row-item">
+            <h6 class="fw-semibold mb-2 opacity-100 top-0 fs-6">Entdecken</h6>
+            <ul class="list-unstyled p-0">
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Preise</a>
               </li>
-              <li>
-                <a href="#">Developer</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Funktionen</a>
+              </li>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Integrationen</a>
+              </li>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Endgeräte</a>
+              </li>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Rufnummern</a>
+              </li>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Geräte & Clients</a>
+              </li>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Developer</a>
               </li>
             </ul>
           </div>
           <div class="footer-row-item">
             <div class="footer-row-item">
-              <h6>Unternehmen</h6>
-              <ul>
-                <li>
-                  <a href="#">Wir sind Placetel</a>
+              <h6 class="fw-semibold mb-2 opacity-100 top-0 fs-6">Unternehmen</h6>
+              <ul class="list-unstyled p-0">
+                <li class="position-relative m-0">
+                  <a class="fw-light" href="#">Wir sind Placetel</a>
                 </li>
-                <li>
-                  <a href="#">Jobs</a>
-                  <span>We're hiring</span>
+                <li class="position-relative m-0">
+                  <a class="fw-light" href="#">Jobs <span
+                      class="text-white position-absolute fw-semibold ms-3 text-uppercase">We're hiring</span></a>
                 </li>
-                <li>
-                  <a href="#">Presse</a>
+                <li class="position-relative m-0">
+                  <a class="fw-light" href="#">Presse</a>
                 </li>
               </ul>
             </div>
             <div class="footer-row-item">
-              <h6>Partner</h6>
-              <ul>
-                <li>
-                  <a href="#">Partner Portal Login</a>
+              <h6 class="fw-semibold mb-2 opacity-100 top-0 fs-6">Partner</h6>
+              <ul class="list-unstyled p-0">
+                <li class="position-relative m-0">
+                  <a class="fw-light" href="#">Partner Portal Login</a>
                 </li>
-                <li>
-                  <a href="#">Partner werden</a>
+                <li class="position-relative m-0">
+                  <a class="fw-light" href="#">Partner werden</a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="footer-row-item">
-            <h6>
-              Services
-            </h6>
-            <ul>
-              <li>
-                <a href="">Blog</a>
+            <h6 class="fw-semibold mb-2 opacity-100 top-0 fs-6">Services</h6>
+            <ul class="list-unstyled p-0">
+              <li class="position-relative m-0">
+                <a class="fw-light" href="">Blog</a>
               </li>
-              <li>
-                <a href="">Ratgeber</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="">Ratgeber</a>
               </li>
-              <li>
-                <a href="">Gratis Webinare</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="">Gratis Webinare</a>
               </li>
-              <li>
-                <a href="">Wechsel in die Cloud</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="">Wechsel in die Cloud</a>
               </li>
-              <li>
-                <a href="">Rufnummermitnahme</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="">Rufnummermitnahme</a>
               </li>
-              <li>
-                <a href="">Kunden werben Kunden</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="">Kunden werben Kunden</a>
               </li>
             </ul>
           </div>
           <div class="footer-row-item">
-            <h6>Hilfe</h6>
-            <ul>
-              <li>
-                <a href="#">Online-Hilfe</a>
+            <h6 class="fw-semibold mb-2 opacity-100 top-0 fs-6">Hilfe</h6>
+            <ul class="list-unstyled p-0">
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Online-Hilfe</a>
               </li>
-              <li>
-                <a href="#">Ticket eröffnen</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Ticket eröffnen</a>
               </li>
-              <li>
-                <a href="#">Remote-Support</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Remote-Support</a>
               </li>
-              <li>
-                <a href="#">Status</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">Status</a>
               </li>
-              <li>
-                <a href="#">FAQ</a>
+              <li class="position-relative m-0">
+                <a class="fw-light" href="#">FAQ</a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 footer-row">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 footer-row mb-4 pb-3">
           <div class="footer-row-item">
             <p>Nutzen Sie unsere Apps:</p>
             <a href="#" class="d-inline-flex google-play-app-store">
@@ -1090,50 +1186,60 @@
           </div>
           <div class="footer-row-item">
             <p>Besuchen Sie uns auch hier:</p>
-            <a href="#" target="_blank" title="LinkedIn" class="social linkedin">
+            <a href="#" target="_blank" title="LinkedIn"
+              class="social mt-0 ms-0 me-3 mb-3 fw-light text-decoration-none border-0 d-inline-flex justify-content-center align-items-center rounded-circle fs-5 linkedin">
               <i class="fa-brands fa-linkedin"></i>
             </a>
-            <a href="#" target="_blank" title="Instagram" class="social instagram">
+            <a href="#" target="_blank" title="Instagram"
+              class="social mt-0 ms-0 me-3 mb-3 fw-light text-decoration-none border-0 d-inline-flex justify-content-center align-items-center rounded-circle fs-5 instagram">
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="#" target="_blank" title="Facebook" class="social facebook">
+            <a href="#" target="_blank" title="Facebook"
+              class="social mt-0 ms-0 me-3 mb-3 fw-light text-decoration-none border-0 d-inline-flex justify-content-center align-items-center rounded-circle fs-5 facebook">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
             <br>
-            <a href="#" target="_blank" title="Youtube" class="social youtube">
+            <a href="#" target="_blank" title="Youtube"
+              class="social mt-0 ms-0 me-3 mb-3 fw-light text-decoration-none border-0 d-inline-flex justify-content-center align-items-center rounded-circle fs-5 youtube">
               <i class="fa-brands fa-youtube"></i>
             </a>
-            <a href="#" target="_blank" title="Xing" class="social xing">
+            <a href="#" target="_blank" title="Xing"
+              class="social mt-0 ms-0 me-3 mb-3 fw-light text-decoration-none border-0 d-inline-flex justify-content-center align-items-center rounded-circle fs-5 xing">
               <i class="fa-brands fa-xing"></i>
             </a>
-            <a href="#" target="_blank" title="Twitter" class="social twitter">
+            <a href="#" target="_blank" title="Twitter"
+              class="social mt-0 ms-0 me-3 mb-3 fw-light text-decoration-none border-0 d-inline-flex justify-content-center align-items-center rounded-circle fs-5 twitter">
               <i class="fa-brands fa-twitter"></i>
             </a>
           </div>
           <div class="footer-row-item">
             <p>Verlassen Sie sich auf uns:</p>
-            <img src="assets/imgs/trustelements.avif" width="344" height="108">
+            <img src="assets/imgs/trustelements.avif" alt="trustelements" width="344" height="108">
           </div>
         </div>
-        <div class="footer-row footer-additional-text">
+        <div class="footer-row footer-additional-text mb-4 py-3 text-center">
           <div class="footer-row-item">
             <strong>Mehr erfahren:</strong>
-            <a href="#">VoIP-Telefonanlage</a> | <a href="#">VoIP-Internet-Telefonie</a>
-            | <a href="#">Virtuelle/Cloud-Telefonanlage</a>| <a href="#">ISDN-Abschaltung</a>| <a
-              href="#">Business-Telefonie</a>
+            <a href="#" class="fw-light text-decoration-none">VoIP-Telefonanlage</a> | <a
+              class="fw-light text-decoration-none" href="#">VoIP-Internet-Telefonie</a>
+            | <a class="fw-light text-decoration-none" href="#">Virtuelle/Cloud-Telefonanlage</a>| <a
+              class="fw-light text-decoration-none" href="#">ISDN-Abschaltung</a>| <a
+              class="fw-light text-decoration-none" href="#">Business-Telefonie</a>
           </div>
         </div>
-        <div class="footer-bottom">
-          <div class="logo m-auto m-lg-0">
+        <div
+          class="footer-bottom position-relative d-flex justify-content-between align-items-center flex-wrap pt-5 mt-4">
+          <div class="logo m-auto me-sm-auto m-lg-0">
             <a href="/">
               <img src="assets/imgs/logo.png" alt="Logo">
             </a>
           </div>
-          <p class="m-auto m-lg-0 text-center">© placetel.de/BroadSoft Germany GmbH <a href="#"
-              title="Datenschutz">Datenschutz</a>
-            <a href="#" title="Datenschutz">Rechtliches</a> <a href="#" title="Datenschutz">Impressum</a>
+          <p class="mx-auto ms-sm-auto m-lg-0 text-center mb-0">© placetel.de/BroadSoft Germany GmbH <a href="#"
+              title="Datenschutz" class="fw-semibold">Datenschutz</a>
+            <a href="#" class="fw-semibold" title="Datenschutz">Rechtliches</a> <a href="#" class="fw-semibold"
+              title="Datenschutz">Impressum</a>
           </p>
-          <div class="m-auto m-lg-0">
+          <div class="m-auto me-sm-auto m-lg-0">
             <div class="country-selector">
               <div class="country-selector-active">
                 <div class="country-selector-icon">
@@ -1142,32 +1248,31 @@
                 <div class="country-selector-country">Germany</div>
                 <div class="country-selector-arrow"></div>
               </div>
-              <ul class="country-selector-list">
-                <li class="country-selector-entry">
+              <ul class="country-selector-list list-unstyled">
+                <li class="country-selector-entry m-0 position-relative">
                   <a href="#">France</a>
                 </li>
-                <li class="country-selector-entry">
+                <li class="country-selector-entry m-0 position-relative">
                   <a href="#">United Kingdom</a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="d-flex justify-content-center m-auto m-lg-0">
-            <span class="cisco-badge-text">Placetel ist Teil von Cisco.</span>
-            <spa class="cisco-image"><img src="assets/imgs/cisco.svg" alt=""></spa>
+          <div class="d-flex justify-content-center m-auto ms-sm-auto m-lg-0">
+            <span class="cisco-badge-text d-inline">Placetel ist Teil von Cisco.</span>
+            <span class="cisco-image"><img src="assets/imgs/cisco.svg" alt=""></span>
           </div>
         </div>
       </div>
     </div>
   </footer>
+  <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
     integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
     crossorigin="anonymous"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
-  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
